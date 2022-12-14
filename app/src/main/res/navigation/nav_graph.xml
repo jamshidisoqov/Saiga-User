@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        tools:layout="@layout/screen_splash"
+        android:name="uz.gita.saiga_user.presentation.splash.SplashScreen"
+        android:label="SplashScreen" >
+        <action
+            android:id="@+id/action_splashScreen_to_loginScreen"
+            app:destination="@id/loginScreen"
+            app:popUpTo="@id/nav_graph" />
+        <action
+            android:id="@+id/action_splashScreen_to_mainScreen"
+            app:destination="@id/mainScreen"
+            app:popUpTo="@id/nav_graph" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_main"
+        android:id="@+id/mainScreen"
+        android:name="uz.gita.saiga_user.presentation.main.MainScreen"
+        android:label="MainScreen" >
+        <action
+            android:id="@+id/action_mainScreen_to_directionalTaxiScreen"
+            app:destination="@id/directionalTaxiScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_favouriteAddressScreen"
+            app:destination="@id/favouriteAddressScreen" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_login"
+        android:id="@+id/loginScreen"
+        android:name="uz.gita.saiga_user.presentation.login.LoginScreen"
+        android:label="LoginScreen" >
+        <action
+            android:id="@+id/action_loginScreen_to_verifyCodeScreen"
+            app:destination="@id/verifyCodeScreen"/>
+        <action
+            android:id="@+id/action_loginScreen_to_registerScreen"
+            app:destination="@id/registerScreen"
+            app:popUpTo="@id/nav_graph" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_verify_code"
+        android:id="@+id/verifyCodeScreen"
+        android:name="uz.gita.saiga_user.presentation.verify.VerifyCodeScreen"
+        android:label="VerifyCodeScreen" >
+        <action
+            android:id="@+id/action_verifyCodeScreen_to_mainScreen"
+            app:destination="@id/mainScreen"
+            app:popUpTo="@id/nav_graph" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_register"
+        android:id="@+id/registerScreen"
+        android:name="uz.gita.saiga_user.presentation.register.RegisterScreen"
+        android:label="RegisterScreen" >
+        <action
+            android:id="@+id/action_registerScreen_to_loginScreen"
+            app:destination="@id/loginScreen"
+            app:popUpTo="@id/nav_graph" />
+        <action
+            android:id="@+id/action_registerScreen_to_verifyCodeScreen"
+            app:destination="@id/verifyCodeScreen" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_directional_detail"
+        android:id="@+id/directionalDetailScreen"
+        android:name="uz.gita.saiga_user.presentation.directional_taxi.details.DirectionalDetailScreen"
+        android:label="DirectionalDetailScreen" />
+    <fragment
+        tools:layout="@layout/screen_directional_taxi"
+        android:id="@+id/directionalTaxiScreen"
+        android:name="uz.gita.saiga_user.presentation.directional_taxi.DirectionalTaxiScreen"
+        android:label="DirectionalTaxiScreen" >
+        <action
+            android:id="@+id/action_directionalTaxiScreen_to_directionalDetailScreen"
+            app:destination="@id/directionalDetailScreen" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_favourite_address"
+        android:id="@+id/favouriteAddressScreen"
+        android:name="uz.gita.saiga_user.presentation.favourite_address.FavouriteAddressScreen"
+        android:label="FavouriteAddressScreen" />
+</navigation>
