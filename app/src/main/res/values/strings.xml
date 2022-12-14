@@ -34,5 +34,8 @@
     <string name="where_to">Where to</string>
     <string name="amount">Departure price</string>
     <string name="time_to_leave">Time to leave</string>
+    <string name="directional_taxi">Directional taxi</string>
+    <string name="favourites_address">Favourite address</string>
+    <string name="trips">My trips</string>
 
 </resources>
