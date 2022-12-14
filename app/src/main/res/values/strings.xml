@@ -37,5 +37,6 @@
     <string name="directional_taxi">Directional taxi</string>
     <string name="favourites_address">Favourite address</string>
     <string name="trips">My trips</string>
+    <string name="search_for_taxis">Search for taxis</string>
 
 </resources>
