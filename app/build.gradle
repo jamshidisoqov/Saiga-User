@@ -116,4 +116,6 @@ dependencies {
 
     implementation "com.github.fraggjkee:sms-confirmation-view:1.7.0"
 
+    debugImplementation "com.github.chuckerteam.chucker:library:3.5.2"
+
 }

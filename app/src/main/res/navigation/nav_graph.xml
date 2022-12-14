@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/splashScreen"
-        tools:layout="@layout/screen_splash"
         android:name="uz.gita.saiga_user.presentation.splash.SplashScreen"
-        android:label="SplashScreen" >
+        android:label="SplashScreen"
+        tools:layout="@layout/screen_splash">
         <action
             android:id="@+id/action_splashScreen_to_loginScreen"
             app:destination="@id/loginScreen"
@@ -20,45 +20,54 @@
             app:popUpTo="@id/nav_graph" />
     </fragment>
     <fragment
-        tools:layout="@layout/screen_main"
         android:id="@+id/mainScreen"
         android:name="uz.gita.saiga_user.presentation.main.MainScreen"
-        android:label="MainScreen" >
+        android:label="MainScreen"
+        tools:layout="@layout/screen_main">
         <action
             android:id="@+id/action_mainScreen_to_directionalTaxiScreen"
             app:destination="@id/directionalTaxiScreen" />
         <action
             android:id="@+id/action_mainScreen_to_favouriteAddressScreen"
             app:destination="@id/favouriteAddressScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_historyScreen"
+            app:destination="@id/historyScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_settingsScreen"
+            app:destination="@id/settingsScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_profileScreen"
+            app:destination="@id/profileScreen" />
     </fragment>
     <fragment
-        tools:layout="@layout/screen_login"
         android:id="@+id/loginScreen"
         android:name="uz.gita.saiga_user.presentation.login.LoginScreen"
-        android:label="LoginScreen" >
+        android:label="LoginScreen"
+        tools:layout="@layout/screen_login">
         <action
             android:id="@+id/action_loginScreen_to_verifyCodeScreen"
-            app:destination="@id/verifyCodeScreen"/>
+            app:destination="@id/verifyCodeScreen" />
         <action
             android:id="@+id/action_loginScreen_to_registerScreen"
             app:destination="@id/registerScreen"
             app:popUpTo="@id/nav_graph" />
     </fragment>
     <fragment
-        tools:layout="@layout/screen_verify_code"
         android:id="@+id/verifyCodeScreen"
         android:name="uz.gita.saiga_user.presentation.verify.VerifyCodeScreen"
-        android:label="VerifyCodeScreen" >
+        android:label="VerifyCodeScreen"
+        tools:layout="@layout/screen_verify_code">
         <action
             android:id="@+id/action_verifyCodeScreen_to_mainScreen"
             app:destination="@id/mainScreen"
             app:popUpTo="@id/nav_graph" />
     </fragment>
     <fragment
-        tools:layout="@layout/screen_register"
         android:id="@+id/registerScreen"
         android:name="uz.gita.saiga_user.presentation.register.RegisterScreen"
-        android:label="RegisterScreen" >
+        android:label="RegisterScreen"
+        tools:layout="@layout/screen_register">
         <action
             android:id="@+id/action_registerScreen_to_loginScreen"
             app:destination="@id/loginScreen"
@@ -68,22 +77,37 @@
             app:destination="@id/verifyCodeScreen" />
     </fragment>
     <fragment
-        tools:layout="@layout/screen_directional_detail"
         android:id="@+id/directionalDetailScreen"
         android:name="uz.gita.saiga_user.presentation.directional_taxi.details.DirectionalDetailScreen"
-        android:label="DirectionalDetailScreen" />
+        android:label="DirectionalDetailScreen"
+        tools:layout="@layout/screen_directional_detail" />
     <fragment
-        tools:layout="@layout/screen_directional_taxi"
         android:id="@+id/directionalTaxiScreen"
         android:name="uz.gita.saiga_user.presentation.directional_taxi.DirectionalTaxiScreen"
-        android:label="DirectionalTaxiScreen" >
+        android:label="DirectionalTaxiScreen"
+        tools:layout="@layout/screen_directional_taxi">
         <action
             android:id="@+id/action_directionalTaxiScreen_to_directionalDetailScreen"
             app:destination="@id/directionalDetailScreen" />
     </fragment>
     <fragment
-        tools:layout="@layout/screen_favourite_address"
         android:id="@+id/favouriteAddressScreen"
         android:name="uz.gita.saiga_user.presentation.favourite_address.FavouriteAddressScreen"
-        android:label="FavouriteAddressScreen" />
+        android:label="FavouriteAddressScreen"
+        tools:layout="@layout/screen_favourite_address" />
+    <fragment
+        android:id="@+id/historyScreen"
+        android:name="uz.gita.saiga_user.presentation.history.HistoryScreen"
+        android:label="HistoryScreen"
+        tools:layout="@layout/screen_history" />
+    <fragment
+        android:id="@+id/settingsScreen"
+        android:name="uz.gita.saiga_user.presentation.settings.SettingsScreen"
+        android:label="SettingsScreen"
+        tools:layout="@layout/screen_settings" />
+    <fragment
+        android:id="@+id/profileScreen"
+        android:name="uz.gita.saiga_user.presentation.profile.ProfileScreen"
+        android:label="ProfileScreen"
+        tools:layout="@layout/screen_profile" />
 </navigation>
