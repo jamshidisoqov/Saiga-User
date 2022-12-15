@@ -40,8 +40,7 @@ class LoginViewModelImpl @Inject constructor(
                 .collectLatest { result ->
                     loadingSharedFlow.emit(false)
                     result.onSuccess {
-                        mySharedPref.verifyToken = it
-                        mySharedPref.phoneNumber = it
+                        //TODO navigate and save shared prefs
                         direction.navigateToVerifyScreen(phone)
                     }.onMessage {
                         messageSharedFlow.emit(it)

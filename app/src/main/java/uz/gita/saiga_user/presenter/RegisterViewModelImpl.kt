@@ -36,7 +36,7 @@ class RegisterViewModelImpl @Inject constructor(
                 .collectLatest { result ->
                     loadingSharedFlow.emit(false)
                     result.onSuccess {
-                        //navigate to
+                        //TODO navigate and save shared prefs
                     }.onMessage {
                         messageSharedFlow.emit(it)
                     }.onError {

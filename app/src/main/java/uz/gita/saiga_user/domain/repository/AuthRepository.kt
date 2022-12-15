@@ -18,4 +18,8 @@ interface AuthRepository {
         lastName: String
     ): Flow<ResultData<UserData>>
 
+    fun verifyCode(code:String):Flow<ResultData<String>>
+
+    fun resendCode()
+
 }
