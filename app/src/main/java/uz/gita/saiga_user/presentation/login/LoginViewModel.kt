@@ -5,6 +5,8 @@ import uz.gita.saiga_user.utils.BaseViewModel
 // Created by Jamshid Isoqov on 12/14/2022
 interface LoginViewModel : BaseViewModel {
 
+    fun navigateToRegister()
+
     fun login(phone: String)
 
 }

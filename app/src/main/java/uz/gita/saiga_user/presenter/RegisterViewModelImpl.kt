@@ -8,18 +8,19 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import uz.gita.saiga_user.data.local.MySharedPref
-import uz.gita.saiga_user.directions.LoginScreenDirection
+import uz.gita.saiga_user.directions.RegisterScreenDirection
 import uz.gita.saiga_user.domain.repository.AuthRepository
-import uz.gita.saiga_user.presentation.login.LoginViewModel
+import uz.gita.saiga_user.presentation.register.RegisterViewModel
 import uz.gita.saiga_user.utils.extensions.getMessage
 import javax.inject.Inject
 
 @HiltViewModel
-class LoginViewModelImpl @Inject constructor(
+class RegisterViewModelImpl @Inject constructor(
     private val authRepository: AuthRepository,
-    private val direction: LoginScreenDirection,
+    private val direction: RegisterScreenDirection,
     private val mySharedPref: MySharedPref
-) : LoginViewModel, ViewModel() {
+) : RegisterViewModel, ViewModel() {
+
 
     override val loadingSharedFlow = MutableSharedFlow<Boolean>()
 
@@ -27,28 +28,27 @@ class LoginViewModelImpl @Inject constructor(
 
     override val errorSharedFlow = MutableSharedFlow<String>()
 
-    override fun navigateToRegister() {
-        viewModelScope.launch {
-            direction.navigateToRegisterScreen()
-        }
-    }
 
-    override fun login(phone: String) {
+    override fun register(phone: String, firstName: String, lastName: String) {
         viewModelScope.launch(Dispatchers.IO) {
             loadingSharedFlow.emit(true)
-            authRepository.login(phone)
+            authRepository.register(phoneNumber = phone, firstName, lastName)
                 .collectLatest { result ->
                     loadingSharedFlow.emit(false)
                     result.onSuccess {
-                        mySharedPref.verifyToken = it
-                        mySharedPref.phoneNumber = it
-                        direction.navigateToVerifyScreen(phone)
+                        //navigate to
                     }.onMessage {
                         messageSharedFlow.emit(it)
                     }.onError {
                         errorSharedFlow.emit(it.getMessage())
                     }
                 }
+        }
+    }
+
+    override fun navigateToLogin() {
+        viewModelScope.launch {
+            direction.navigateToLogin()
         }
     }
 }

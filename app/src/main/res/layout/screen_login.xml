@@ -54,7 +54,7 @@
             android:minEms="4"
             android:textColor="@color/black"
             app:keep_hint="false"
-            app:mask="+99 8(##) ### ## ##"
+            app:mask="+99 8## ### ## ##"
             tools:ignore="TextFields" />
 
     </com.google.android.material.textfield.TextInputLayout>
