@@ -38,5 +38,14 @@
     <string name="favourites_address">Favourite address</string>
     <string name="trips">My trips</string>
     <string name="search_for_taxis">Search for taxis</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="choose_date">Choose date</string>
+    <string name="error">Error</string>
+    <string name="language">Language</string>
+    <string name="uzbek">Uzbek</string>
+    <string name="english">English</string>
+    <string name="message">Message</string>
+    <string name="success">Success</string>
 
 </resources>

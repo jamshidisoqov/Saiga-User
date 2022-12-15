@@ -62,6 +62,9 @@
             android:id="@+id/action_verifyCodeScreen_to_mainScreen"
             app:destination="@id/mainScreen"
             app:popUpTo="@id/nav_graph" />
+        <argument
+            android:name="phone_number"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/registerScreen"

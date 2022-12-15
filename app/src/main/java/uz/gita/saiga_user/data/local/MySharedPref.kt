@@ -24,4 +24,6 @@ class MySharedPref @Inject constructor(
 
     var phoneNumber: String by Strings("")
 
+    var language:Int by Ints(1)
+
 }
