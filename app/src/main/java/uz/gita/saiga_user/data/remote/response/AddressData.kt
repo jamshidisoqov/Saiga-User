@@ -1,14 +1,15 @@
 package uz.gita.saiga_user.data.remote.response
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
 // Created by Jamshid Isoqov on 12/15/2022
+@Parcelize
 data class AddressData(
     val id: Long,
     val title: String,
-    val lat: Double,
-    val lon: Double
-)
+    val lat: Double? = null,
+    val lon: Double? = null
+):Parcelable
 
-/*
-    val createdDate: Timestamp,
-    val updatedDate: Timestamp
- */
+

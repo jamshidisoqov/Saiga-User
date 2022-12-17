@@ -6,6 +6,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
 import uz.gita.saiga_user.directions.*
 import uz.gita.saiga_user.directions.impl.*
+import uz.gita.saiga_user.presenter.DirectionalTaxiViewModelImpl
 import javax.inject.Singleton
 
 // Created by Jamshid Isoqov on 12/14/2022
@@ -30,5 +31,8 @@ interface DirectionsModule {
 
     @[Binds Singleton]
     fun bindProfileDirections(impl: ProfileScreenDirectionImpl): ProfileScreenDirection
+
+    @[Binds Singleton]
+    fun bindDirectionalTaxi(impl: DirectionalTaxiViewModelImpl): DirectionalTaxiDirection
 
 }

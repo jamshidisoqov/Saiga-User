@@ -83,7 +83,11 @@
         android:id="@+id/directionalDetailScreen"
         android:name="uz.gita.saiga_user.presentation.directional_taxi.details.DirectionalDetailScreen"
         android:label="DirectionalDetailScreen"
-        tools:layout="@layout/screen_directional_detail" />
+        tools:layout="@layout/screen_directional_detail" >
+        <argument
+            android:name="direction_data"
+            app:argType="uz.gita.saiga_user.data.remote.response.DirectionalTaxiData" />
+    </fragment>
     <fragment
         android:id="@+id/directionalTaxiScreen"
         android:name="uz.gita.saiga_user.presentation.directional_taxi.DirectionalTaxiScreen"

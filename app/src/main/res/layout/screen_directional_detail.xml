@@ -114,6 +114,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/card_money"
         android:layout_width="0dp"
         android:layout_height="80dp"
         android:layout_marginStart="@dimen/margin_small"
@@ -181,7 +182,7 @@
                 app:tint="@color/primary" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tv_order_expanse"
+                android:id="@+id/tv_schedule"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/image_calendar"
@@ -193,6 +194,17 @@
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_inner_top"
+        android:elevation="@dimen/margin_extra_small"
+        android:layout_marginTop="@dimen/margin_component"
+        app:layout_constraintTop_toBottomOf="@id/card_money"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_call"
