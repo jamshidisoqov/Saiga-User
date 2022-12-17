@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import dagger.hilt.android.qualifiers.ApplicationContext
 import uz.gita.saiga_user.utils.SharedPreference
+import uz.gita.saiga_user.utils.extensions.getCurrentDate
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -22,8 +23,10 @@ class MySharedPref @Inject constructor(
 
     var lastName: String by Strings("")
 
+    var birthDay: String by Strings(getCurrentDate())
+
     var phoneNumber: String by Strings("")
 
-    var language:Int by Ints(1)
+    var language: Int by Ints(1)
 
 }

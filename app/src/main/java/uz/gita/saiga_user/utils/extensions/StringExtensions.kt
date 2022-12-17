@@ -10,7 +10,7 @@ import java.util.*
 @SuppressLint("SimpleDateFormat")
 fun getCurrentDate(): String {
     val c = Calendar.getInstance().time
-    return SimpleDateFormat("MMM dd,yyyy").format(c).uppercase()
+    return SimpleDateFormat("MMM dd,yyyy").format(c)
 }
 
 @SuppressLint("SimpleDateFormat")

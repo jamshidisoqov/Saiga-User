@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_language"
+    android:padding="24dp">
+
+    <HorizontalScrollView
+        android:id="@+id/container_car_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UselessLeaf">
+
+        <LinearLayout
+            android:id="@+id/container_car_type_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/container_light_weight_car"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:layout_marginHorizontal="@dimen/margin_small"
+                android:background="@drawable/bg_car_type"
+                android:padding="@dimen/margin_std"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/light_car" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom|end"
+                    android:src="@drawable/saiga_yellow_car" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/container_medium_weight_car"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:layout_marginHorizontal="@dimen/margin_small"
+                android:padding="@dimen/margin_std"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/medium_car" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom|end"
+                    android:src="@drawable/saiga_yellow_car" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/container_heavy_weight_car"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:layout_marginHorizontal="@dimen/margin_small"
+                android:padding="@dimen/margin_std"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/heavy_car" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom|end"
+                    android:src="@drawable/saiga_yellow_car" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/container_direction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_component"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/container_car_type">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_component"
+            android:layout_marginTop="@dimen/margin_component"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_target_red" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_first_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="12dp"
+                android:text="@string/default_from"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_component"
+            android:layout_marginVertical="@dimen/margin_small"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_target_blue" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_second_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="12dp"
+                android:text="@string/default_to"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_favourite"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_profile_container"
+        android:padding="8dp"
+        android:src="@drawable/ic_heart"
+        app:layout_constraintBottom_toBottomOf="@id/btn_order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_order" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_order"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_component"
+        android:layout_marginEnd="@dimen/margin_component"
+        android:text="@string/order"
+        android:background="@drawable/bg_main_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/image_favourite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container_direction" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

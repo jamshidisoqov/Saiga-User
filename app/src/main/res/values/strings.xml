@@ -47,5 +47,16 @@
     <string name="english">English</string>
     <string name="message">Message</string>
     <string name="success">Success</string>
+    <string name="light_car">Light weight</string>
+    <string name="medium_car">Medium weight</string>
+    <string name="heavy_car">Heavy weight</string>
+    <string name="order">Order</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="birthday">Birthday</string>
+    <string name="confirm">Save</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
 
 </resources>

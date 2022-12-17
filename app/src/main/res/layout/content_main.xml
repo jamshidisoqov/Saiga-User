@@ -5,14 +5,14 @@
     android:layout_height="match_parent"
     android:background="@color/bg_color">
 
-    <!--  <androidx.fragment.app.FragmentContainerView
+      <androidx.fragment.app.FragmentContainerView
           android:id="@+id/container_map"
-          android:name="uz.gita.my_taxi_jamshid.presentation.screens.main.MapHelper"
+          android:name="uz.gita.saiga_user.presentation.main.helper.MapHelper"
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent" />-->
+          app:layout_constraintTop_toTopOf="parent" />
 
 
     <com.google.android.material.imageview.ShapeableImageView
@@ -142,7 +142,7 @@
                         android:src="@drawable/ic_location_red" />
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/input_where_to"
+                        android:id="@+id/input_where_from"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
@@ -182,7 +182,7 @@
                         android:src="@drawable/ic_location_blue" />
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/tv_where_to"
+                        android:id="@+id/input_where_to"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
@@ -191,11 +191,11 @@
                         android:background="#f8f8f8"
                         android:text="@string/where_to" />
 
-                    <androidx.appcompat.widget.AppCompatImageView
+                    <ImageView
+                        android:id="@+id/image_order"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:backgroundTint="@color/error_color"
-                        android:background="@drawable/bg_circle"
+                        android:background="@drawable/bg_disabled"
                         android:padding="@dimen/margin_std"
                         app:tint="@color/white"
                         android:src="@drawable/ic_next" />

@@ -22,4 +22,6 @@ interface AuthRepository {
 
     fun resendCode()
 
+    fun updateUser(firstName:String,lastName:String):Flow<ResultData<UserData>>
+
 }
